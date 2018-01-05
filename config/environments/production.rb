@@ -91,20 +91,20 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'calm-citadel-45621.herokuapp.com' }
 
-  # Configure smtp settings for emails
-  require 'tlsmail'
-  Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
-  ActionMailer::Base.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.default :charset => "utf-8"
-  ActionMailer::Base.smtp_settings = {
-      :address => "smtp.gmail.com",
-      :port => 587, :user_name => "teenmind1408@gmail.com",
-      :password => 'bs322_Br', :authentication => "plain",
-      :enable_starttls_auto => true }
-  # Raise error if smtp has error on setup
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default :charset => "utf-8"
+  # # Configure smtp settings for emails
+  # require 'tlsmail'
+  # Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
+  # ActionMailer::Base.delivery_method = :smtp
+  # config.action_mailer.perform_deliveries = true
+  # config.action_mailer.default :charset => "utf-8"
+  # ActionMailer::Base.smtp_settings = {
+  #     :address => "smtp.gmail.com",
+  #     :port => 587, :user_name => "teenmind1408@gmail.com",
+  #     :password => 'bs322_Br', :authentication => "plain",
+  #     :enable_starttls_auto => true }
+  # # Raise error if smtp has error on setup
+  # config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.default :charset => "utf-8"
 
 
 end
